@@ -1,0 +1,197 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: whitesmoke;
+	font-family: Georgia, serif;
+	font-size: 14px;
+}
+
+#jeu {
+	margin: 50px auto;
+	width: 800px;
+	border: 1px solid blue;
+	background-color: lightblue;
+	box-shadow: 10px 10px 30px;
+	padding: 10px;
+	display: grid;
+	grid-template-rows: 140px 260px;
+	grid-template-columns: 500px 1fr;
+}
+
+#mot {
+	border: 1px solid blue;
+	grid-row: 1/2;
+	grid-column: 1/2;
+	text-align: center;
+	font-size: 1.8em;
+	letter-spacing: 0.6em;
+	padding: 50px 20px;
+}
+
+#alphabet {
+	border: 1px solid blue;
+	grid-row: 2/3;
+	grid-column: 1/2;
+	text-align: center;
+	font-size: 1.4em;
+	letter-spacing: 0.9em;
+	line-height: 2.2em;
+	padding: 100px 20px;
+}
+
+#alphabet span {
+	cursor: pointer;
+}
+
+#alphabet .disabled {
+	color: darkgrey;
+	cursor: not-allowed;
+}
+
+#pendu {
+	border: 1px solid blue;
+	grid-row: 1/3;
+	grid-column: 2/3;
+	position: relative;
+}
+
+#pendu #floor {
+	position: absolute;
+	top: 350px;
+	width: 100%;
+	height: 10px;
+	background-color: black;
+}
+
+#pendu #post {
+	position: absolute;
+	top: 50px;
+	left: 30px;
+	width: 10px;
+	height: 300px;
+	background-color: black;
+}
+
+#pendu #bar {
+	position: absolute;
+	top: 40px;
+	width: 200px;
+	height: 10px;
+	background-color: black;
+}
+
+#pendu #crosssection {
+	position: absolute;
+	top: 70px;
+	left: 25px;
+	width: 80px;
+	height: 10px;
+	background-color: black;
+	transform: rotate(-45deg);
+}
+
+#pendu #rope {
+	position: absolute;
+	top: 50px;
+	left: 170px;
+	width: 3px;
+	height: 60px;
+	background-color: black;
+}
+
+#pendu #head {
+	position: absolute;
+	top: 110px;
+	left: 151px;
+	width: 40px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: black;
+	display: none;
+}
+
+#pendu #body {
+	position: absolute;
+	top: 160px;
+	left: 169px;
+	width: 5px;
+	height: 60px;
+	background-color: black;
+	display: none;
+}
+
+#pendu #leftarm {
+	position: absolute;
+	top: 170px;
+	left: 155px;
+	width: 5px;
+	height: 40px;
+	background-color: black;
+	transform: rotate(45deg);
+	display: none;
+}
+
+#pendu #rightarm {
+	position: absolute;
+	top: 170px;
+	left: 183px;
+	width: 5px;
+	height: 40px;
+	background-color: black;
+	transform: rotate(-45deg);
+	display: none;
+}
+
+#pendu #leftleg {
+	position: absolute;
+	top: 210px;
+	left: 155px;
+	width: 5px;
+	height: 40px;
+	background-color: black;
+	transform: rotate(45deg);
+	display: none;
+}
+
+#pendu #rightleg {
+	position: absolute;
+	top: 210px;
+	left: 183px;
+	width: 5px;
+	height: 40px;
+	background-color: black;
+	transform: rotate(-45deg);
+	display: none;
+}
+
+#pendu #perdu {
+	position: absolute;
+	color: red;
+	border: 1px solid red;
+	font-size: 1.8em;
+	font-weight: 900;
+	padding: 10px;
+	top: 160px;
+	left: 83px;
+	transform: rotate(-45deg);
+	display: none;	
+}
+
+#pendu #gagne {
+	position: absolute;
+	color: green;
+	border: 1px solid green;
+	font-size: 2.2em;
+	font-weight: 900;
+	padding: 10px;
+	top: 160px;
+	left: 83px;
+	transform: rotate(-45deg);
+	display: none;	
+}
+
+
